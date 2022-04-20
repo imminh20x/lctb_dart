@@ -30,5 +30,7 @@ void main(List<String> args) {
   if (thang == 2 && ((nam % 4 == 0 && nam % 100 != 0) || nam % 400 == 0))
     ngayTrongThang[2] = 29;
 
-  print('Thang ${thang} trong ${nam} co ${ngayTrongThang[thang]} ngay');
+  var ngayCanKiemTra = DateTime(nam, thang ,ngay).weekday;
+  List ngayTrongTuan = ['Chủ Nhật', 'Thứ Hai', 'Thứ Ba', 'Thứ Tư', 'Thứ Năm', 'Thứ Sáu', 'Thứ Bảy'];
+  print('Ngày $ngay/$thang/$nam là ngày ${ngayTrongTuan[ngayCanKiemTra]}');
 }
